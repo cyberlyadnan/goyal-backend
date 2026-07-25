@@ -1,0 +1,13 @@
+﻿export { authRoutes } from './auth/index.js';
+export { usersRoutes } from './users/index.js';
+export { retailersRoutes } from './retailers/index.js';
+export { brandsRoutes } from './brands/index.js';
+export { categoriesRoutes } from './categories/index.js';
+export { productsRoutes } from './products/index.js';
+export { cartRoutes } from './cart/index.js';
+export { ordersRoutes } from './orders/index.js';
+export { paymentsRoutes } from './payments/index.js';
+export { notificationsRoutes } from './notifications/index.js';
+export { bannersRoutes } from './banners/index.js';
+export { offersRoutes } from './offers/index.js';
+export { dashboardRoutes } from './dashboard/index.js';

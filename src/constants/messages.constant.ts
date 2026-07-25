@@ -1,0 +1,17 @@
+export const MESSAGES = {
+  SUCCESS: 'Request completed successfully',
+  CREATED: 'Resource created successfully',
+  UPDATED: 'Resource updated successfully',
+  DELETED: 'Resource deleted successfully',
+  NOT_FOUND: 'Resource not found',
+  UNAUTHORIZED: 'Authentication required',
+  FORBIDDEN: 'You do not have permission to perform this action',
+  VALIDATION_FAILED: 'Validation failed',
+  INTERNAL_ERROR: 'Something went wrong',
+  NOT_IMPLEMENTED: 'This endpoint is not implemented yet',
+  TOO_MANY_REQUESTS: 'Too many requests, please try again later',
+  INVALID_CREDENTIALS: 'Invalid credentials',
+  TOKEN_EXPIRED: 'Token has expired',
+  TOKEN_INVALID: 'Invalid token',
+  HEALTH_OK: 'Service is healthy',
+} as const;
