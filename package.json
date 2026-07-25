@@ -1,0 +1,29 @@
+{
+  "name": "goyal-wholesale-backend",
+  "version": "1.0.0",
+  "description": "Production-grade B2B Wholesale Ordering Platform backend for FMCG distributors",
+  "type": "module",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
+    "format": "prettier --write \"src/**/*.js\" \"*.{js,json,md}\"",
+    "format:check": "prettier --check \"src/**/*.js\" \"*.{js,json,md}\"",
+    "module:create": "node scripts/createModule.js"
+  },
+  "keywords": [
+    "b2b",
+    "wholesale",
+    "fmcg",
+    "ecommerce",
+    "express",
+    "mongodb"
+  ],
+  "license": "UNLICENSED",
+  "private": true
+}
