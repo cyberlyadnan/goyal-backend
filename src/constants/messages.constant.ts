@@ -40,4 +40,14 @@ export const MESSAGES = {
   PRODUCT_DELETED: 'Product deleted successfully',
   PRODUCT_NOT_FOUND: 'Product not found',
   STOCK_UPDATED: 'Stock updated successfully',
+  PRODUCT_OUT_OF_STOCK: 'Product is out of stock',
+
+  CART_ITEM_ADDED: 'Product added to cart',
+  CART_UPDATED: 'Cart updated successfully',
+  CART_ITEM_REMOVED: 'Product removed from cart',
+  CART_CLEARED: 'Cart cleared successfully',
+  CART_NOT_FOUND: 'Cart not found',
+  CART_ITEM_NOT_FOUND: 'Cart item not found',
+  CART_EMPTY: 'Your cart is empty',
+  CHECKOUT_CONFIRMED: 'Checkout confirmed successfully',
 } as const;

@@ -12,6 +12,7 @@ import {
   categoriesRoutes,
   productsRoutes,
   cartRoutes,
+  checkoutRoutes,
   ordersRoutes,
   paymentsRoutes,
   notificationsRoutes,
@@ -64,6 +65,7 @@ router.get(
 );
 
 router.use('/cart', cartRoutes);
+router.use('/checkout', checkoutRoutes);
 router.use('/orders', ordersRoutes);
 router.use('/payments', paymentsRoutes);
 router.use('/notifications', notificationsRoutes);

@@ -5,6 +5,7 @@ export { brandsRoutes } from './brands/index.js';
 export { categoriesRoutes } from './categories/index.js';
 export { productsRoutes } from './products/index.js';
 export { cartRoutes } from './cart/index.js';
+export { checkoutRoutes } from './cart/index.js';
 export { ordersRoutes } from './orders/index.js';
 export { paymentsRoutes } from './payments/index.js';
 export { notificationsRoutes } from './notifications/index.js';
