@@ -16,7 +16,8 @@
     "format": "prettier --write \"src/**/*.{ts,json}\" \"*.{json,md,yml,yaml}\"",
     "format:check": "prettier --check \"src/**/*.{ts,json}\" \"*.{json,md,yml,yaml}\"",
     "typecheck": "tsc --noEmit",
-    "seed:auth": "tsx src/scripts/seedAuth.ts"
+    "seed:auth": "tsx src/scripts/seedAuth.ts",
+    "seed:catalog": "tsx src/scripts/seedCatalog.ts"
   },
   "keywords": [
     "b2b",

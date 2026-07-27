@@ -2,3 +2,4 @@
 export { brandsController } from './controllers/brands.controller.js';
 export { brandsService } from './services/brands.service.js';
 export { brandsRepository } from './repositories/brands.repository.js';
+export { Brand } from './models/brand.model.js';

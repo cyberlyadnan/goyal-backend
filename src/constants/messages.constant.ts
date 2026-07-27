@@ -24,4 +24,20 @@ export const MESSAGES = {
   LOGIN_SUCCESS: 'Login successful',
   LOGOUT_SUCCESS: 'Logged out successfully',
   TOKEN_REFRESHED: 'Token refreshed successfully',
+
+  BRAND_CREATED: 'Brand created successfully',
+  BRAND_UPDATED: 'Brand updated successfully',
+  BRAND_DELETED: 'Brand deleted successfully',
+  BRAND_NOT_FOUND: 'Brand not found',
+
+  CATEGORY_CREATED: 'Category created successfully',
+  CATEGORY_UPDATED: 'Category updated successfully',
+  CATEGORY_DELETED: 'Category deleted successfully',
+  CATEGORY_NOT_FOUND: 'Category not found',
+
+  PRODUCT_CREATED: 'Product created successfully',
+  PRODUCT_UPDATED: 'Product updated successfully',
+  PRODUCT_DELETED: 'Product deleted successfully',
+  PRODUCT_NOT_FOUND: 'Product not found',
+  STOCK_UPDATED: 'Stock updated successfully',
 } as const;

@@ -11,3 +11,4 @@ export {
 export { generateOtp } from './otp.helper.js';
 export { hashPassword, comparePassword } from './password.helper.js';
 export { generateUuid, uuidv4 } from './uuid.helper.js';
+export { slugify, uniqueSlug } from './slug.helper.js';
