@@ -1,8 +1,13 @@
-﻿import type { Request, Response } from 'express';
+﻿import type { Response } from 'express';
 import { ApiResponse } from '../../../utils/ApiResponse.js';
-import { ApiError } from '../../../utils/ApiError.js';
 import { MESSAGES } from '../../../constants/index.js';
+import type { AuthRequest } from '../../../types/index.js';
 import { authService } from '../services/auth.service.js';
+import type {
+  RefreshTokenInput,
+  SendOtpInput,
+  VerifyOtpInput,
+} from '../validators/auth.validator.js';
 
 /**
  * Auth controllers — thin HTTP adapters. Business logic lives in services.
@@ -10,13 +15,35 @@ import { authService } from '../services/auth.service.js';
 export class AuthController {
   constructor(private readonly service = authService) {}
 
-  health = async (_req: Request, res: Response): Promise<Response> => {
-    const data = await this.service.getModuleStatus();
-    return ApiResponse.ok(res, MESSAGES.SUCCESS, data);
+  sendOtp = async (req: AuthRequest, res: Response): Promise<Response> => {
+    const body = req.body as SendOtpInput;
+    const data = await this.service.sendOtp(body);
+    return ApiResponse.ok(res, MESSAGES.OTP_SENT, data);
   };
 
-  notImplemented = async (_req: Request, _res: Response): Promise<never> => {
-    throw ApiError.notImplemented();
+  verifyOtp = async (req: AuthRequest, res: Response): Promise<Response> => {
+    const body = req.body as VerifyOtpInput;
+    const data = await this.service.verifyOtp(body);
+    return ApiResponse.ok(res, MESSAGES.LOGIN_SUCCESS, data);
+  };
+
+  refresh = async (req: AuthRequest, res: Response): Promise<Response> => {
+    const body = req.body as RefreshTokenInput;
+    const data = await this.service.refresh(body);
+    return ApiResponse.ok(res, MESSAGES.TOKEN_REFRESHED, data);
+  };
+
+  logout = async (req: AuthRequest, res: Response): Promise<Response> => {
+    if (!req.user?.id) {
+      return ApiResponse.ok(res, MESSAGES.LOGOUT_SUCCESS, {});
+    }
+    await this.service.logout(req.user.id);
+    return ApiResponse.ok(res, MESSAGES.LOGOUT_SUCCESS, {});
+  };
+
+  me = async (req: AuthRequest, res: Response): Promise<Response> => {
+    const user = await this.service.getMe(req.user!.id);
+    return ApiResponse.ok(res, MESSAGES.SUCCESS, { user });
   };
 }
 

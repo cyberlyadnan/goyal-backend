@@ -1,6 +1,2 @@
-﻿/**
- * Auth Mongoose model placeholder.
- * Define schema and export the model when implementing this feature.
- */
-
-export const authModelPlaceholder = true;
+﻿export { default as Otp } from './otp.model.js';
+export type { IOtp, IOtpDocument } from './otp.model.js';

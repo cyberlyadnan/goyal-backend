@@ -14,4 +14,14 @@ export const MESSAGES = {
   TOKEN_EXPIRED: 'Token has expired',
   TOKEN_INVALID: 'Invalid token',
   HEALTH_OK: 'Service is healthy',
+
+  OTP_SENT: 'OTP sent successfully',
+  OTP_INVALID: 'Invalid or expired OTP',
+  OTP_MAX_ATTEMPTS: 'Too many invalid OTP attempts. Request a new OTP',
+  OTP_EXPIRED: 'OTP has expired. Please request a new one',
+  USER_NOT_FOUND: 'No account found for this mobile number',
+  USER_INACTIVE: 'Your account has been deactivated. Contact support',
+  LOGIN_SUCCESS: 'Login successful',
+  LOGOUT_SUCCESS: 'Logged out successfully',
+  TOKEN_REFRESHED: 'Token refreshed successfully',
 } as const;
